@@ -13,16 +13,33 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            border: 2px solid black;
         }
 
         td, th {
             border: 1px solid black;
             padding: 10px;
         }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+            border: 2px solid black;
+            border-bottom: 1px solid black;
+        }
 
         thead, tfoot {
             background-color: grey;
             color: white;
+        }
+
+        tfoot {
+            border: 2px solid black;
+        }
+
+        tfoot td{
+            border: 1px solid gray;
         }
 
         td.num {
@@ -35,6 +52,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -43,12 +61,13 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Cidades do Brasil</caption>
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Localidade</th>
-                <th>Unidade Federativa</th>
-                <th>População</th>
+                <th scope="col" style=" width: 50px">Posição</th>
+                <th scope="col">Localidade</th>
+                <th scope="col">Unidade Federativa</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
@@ -175,10 +194,10 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td></td>
                 <td></td>
-                <td class="num"><strong>74 518 463</strong></td>
+                <td id="dados"><strong>74 518 463</strong></td>
             </tr>
         </tfoot>
     </table>
