@@ -17,7 +17,6 @@
         table {
             width: 500px;
             border-collapse: collapse;
-            border: 2px solid black;
             margin: auto;
             position: relative;
         }
@@ -32,8 +31,8 @@
             font-weight: bold;
             padding: 10px;
             background-color: lightgrey;
-            border: 2px solid black;
-            border-bottom: 1px solid black;
+            border: 1px solid black;
+            border-bottom: 0px;
         }
 
         thead, tfoot {
@@ -55,16 +54,12 @@
             background-color: lightgray;
         }
 
-        tfoot {
-            border: 2px solid black;
-        }
-
-        tfoot td{
-            border: 1px solid #383838;
-        }
-
         td.num {
             text-align: right;
+        }
+
+        #centro {
+            text-align: center;
         }
     </style>
 </head>
@@ -216,9 +211,7 @@
         <tfoot>
             <tr>
                 <th scope="row">Total de Habitantes</th>
-                <td></td>
-                <td><strong>74 518 463</strong></td>
-                <td></td>
+                <td colspan="3" id="centro"><strong>74 518 463</strong></td>
             </tr>
         </tfoot>
     </table>
